@@ -12,3 +12,8 @@ def force_nvidia():
 
 # Another thing we can do
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+def force_x11():
+    # For Wayland Compatability issues
+    os.environ["XDG_SESSION_TYPE"] = "x11"
+    os.environ["DISPLAY"] = ":0"

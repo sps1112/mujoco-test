@@ -1,0 +1,21 @@
+<mujoco>
+  <worldbody>
+    <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
+    <geom name="ground" type="plane" size="3 3 .1" rgba=".9 .9 .9 1"/>
+    <body name="ball_static" pos=".1 .1 .25">
+      <geom name="sphere" size=".25" rgba=".9 .3 .1 1"/>
+    </body>
+    <body name="ball_dynamic" pos="0 1 .5">
+      <joint type="free"/>
+      <geom name="sphere2" size=".25" rgba=".1 .9 .3 1"/>
+    </body>
+    <body name="fixed_lever" pos=".5 -.8 .2">
+      <joint/>
+      <geom name="box" type="box" size="1 .03 .2" rgba=".1 .3 1 1"/>
+    </body>
+    <body name="cube" pos="-1 0 1">
+      <joint type="free"/>
+      <geom name="box2" type="box" size=".1 .2 .3" rgba=".7 .1 1 1"/>
+    </body>
+  </worldbody>
+</mujoco>
